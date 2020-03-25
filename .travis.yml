@@ -15,3 +15,5 @@ deploy:
 
 on:
   branch: master
+  access-key-id: $AWS_API_KEY
+  secret-access-key: $AWS_SECRET_KEY
