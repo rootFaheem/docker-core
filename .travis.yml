@@ -2,6 +2,10 @@ sudo: required
 services:
   - docker
 
+language: node_js
+  node_js:
+    - 12.16.1
+
 before-install:
   - docker build -t rootfaheem/docker-core -f Dockerfile.dev .
 
