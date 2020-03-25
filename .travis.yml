@@ -4,3 +4,14 @@ services:
 
 before-install:
   - docker build -t rootfaheem/docker-lab -f Dockerfile.dev .
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-south-1"
+  app: "docker-core"
+  env: "Docker-env"
+  bucket_name: "elasticbeanstalk-ap-south-1-403740642838"
+  bucket_path: "docker-core"
+
+on:
+  branch: master
